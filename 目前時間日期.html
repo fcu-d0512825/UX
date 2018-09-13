@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<script language="JavaScript">
+function ShowTime(){
+　　var NowDate=new Date();
+　var h=NowDate.getHours();
+　var m=NowDate.getMinutes();
+　var s=NowDate.getSeconds();
+  var year=NowDate.getFullYear();
+  var month=NowDate.getMonth()+1;
+  var date=NowDate.getDate();
+　document.getElementById('showbox').innerHTML = "現在是 " + year+ " 年 " + month + " 月 " + date + " 日" + h+'時'+m+'分'+s+'秒';
+　setTimeout('ShowTime()',1000);
+
+}
+</script>
+<body onload="ShowTime()">
+<div id="showbox"></div>
+</body>
+</html>
